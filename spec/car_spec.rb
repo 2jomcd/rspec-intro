@@ -8,6 +8,14 @@ describe Car do
 			expect(car).to respond_to :speed
 		end
 
+		it 'can set the speed' do
+			expect {
+				car.speed = 100
+			}.not_to raise_exception
+
+			expect(car.speed).to eq 100
+		end
+
 		it 'sets the start speed to 0' do
 			expect(car.speed).to eq 0
 		end
